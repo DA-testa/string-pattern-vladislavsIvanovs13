@@ -3,8 +3,7 @@
 def read_input():
     command = input()
     if "F" in command:
-        file_name = input()
-        path = "tests/" + file_name
+        path = "tests/" + "06"
         if not "a" in file_name:
             choice = open(path, "r").read()
             partitioned = choice.partition("\n")
