@@ -6,9 +6,10 @@ def read_input():
         file_name = "06"
         path = "tests/" + file_name
         if not "a" in file_name:
-            choice = open(path, "r").read()
-            partitioned = choice.partition("\n")
+            choice = open(path, "r")
+            read_choice = choice.read()
             choice.close()
+            partitioned = read_choice.partition("\n")
             pattern = partitioned[0].rstrip()
             text = partitioned[2].rstrip()
             tup = tuple((pattern, text))
